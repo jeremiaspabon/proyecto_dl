@@ -1,0 +1,40 @@
+{
+  "total_registros": 15974,
+  "columnas": [
+    "Fecha",
+    "Municipio",
+    "Sector",
+    "Categoria",
+    "Reporte",
+    "Resolucion"
+  ],
+  "valores_nulos": {
+    "Fecha": 0,
+    "Municipio": 0,
+    "Sector": 0,
+    "Categoria": 0,
+    "Reporte": 0,
+    "Resolucion": 0
+  },
+  "tipos": {
+    "Fecha": "object",
+    "Municipio": "object",
+    "Sector": "object",
+    "Categoria": "object",
+    "Reporte": "object",
+    "Resolucion": "object"
+  },
+  "categorias_unicas": 4,
+  "distribucion_categorias": {
+    "Retroalimentación positiva": 8217,
+    "Solicitud de información": 5986,
+    "Insatisfacción mínima": 1095,
+    "Solicitud  de asistencia": 676
+  },
+  "longitudes_texto": {
+    "media": 157.60072618004256,
+    "mediana": 97.0,
+    "min": 0,
+    "max": 10017
+  }
+}

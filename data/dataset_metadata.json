@@ -1,0 +1,25 @@
+{
+  "fecha_procesamiento": "2025-04-30 11:33:09",
+  "columnas": [
+    "Fecha",
+    "Municipio",
+    "Sector",
+    "Categoria",
+    "Reporte",
+    "Resolucion"
+  ],
+  "categorias": [
+    "Retroalimentación positiva",
+    "Solicitud de información",
+    "Insatisfacción mínima",
+    "Solicitud  de asistencia"
+  ],
+  "distribucion": {
+    "Retroalimentación positiva": 8217,
+    "Solicitud de información": 5986,
+    "Insatisfacción mínima": 1095,
+    "Solicitud  de asistencia": 676
+  },
+  "tamaño_total": 15974,
+  "descripcion": "Dataset limpio y particionado para modelo BERT"
+}
