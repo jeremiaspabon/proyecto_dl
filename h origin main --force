@@ -1,0 +1,180 @@
+[33mcommit 13359b8dd7131ba22d1b6c54e00c4ab78ffb6de3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Julk-ui <grinconp2@ucentral.edu.co>
+Date:   Fri May 2 17:20:22 2025 -0500
+
+    Se sube el análisis de la validación, pruebas cortas de texto y demás
+
+ README.md                        | 118 [32m++++++++++++++++++++++++++++++++++++++[m[31m-[m
+ models/modelo_bert_finetuned.pth | Bin [31m0[m -> [32m711510550[m bytes
+ src/probar_textos.ipynb          | 117 [32m++++++++++++++++++++++++++++++++++++++[m
+ 3 files changed, 233 insertions(+), 2 deletions(-)
+
+[33mcommit c19d080afa8a38b5a21bac1e9b4fef5d83838328[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Julk-ui <grinconp2@ucentral.edu.co>
+Date:   Fri May 2 06:21:25 2025 -0500
+
+    Se añade modelo y graficas con evaluacion
+
+ models/tokenizer/special_tokens_map.json           |      7 [32m+[m
+ models/tokenizer/tokenizer/special_tokens_map.json |      7 [32m+[m
+ models/tokenizer/tokenizer/tokenizer_config.json   |     15 [32m+[m
+ models/tokenizer/tokenizer/vocab.txt               | 119547 [32m++++++++++++++++++[m
+ models/tokenizer/tokenizer_config.json             |     15 [32m+[m
+ models/tokenizer/vocab.txt                         | 119547 [32m++++++++++++++++++[m
+ models/x                                           |      1 [31m-[m
+ notebooks/03_evaluacion_analisis.ipynb             |    253 [32m+[m
+ notebooks/Exploracion.ipynb                        |    198 [32m+[m[31m-[m
+ notebooks/modelbert.ipynb                          |    314 [32m+[m[31m-[m
+ notebooks/prueba.py                                |     15 [32m+[m
+ notebooks/prueba_3.py                              |      9 [32m+[m
+ notebooks/verificar_artefactos.py                  |     40 [32m+[m
+ outputs/confusion_matrix.png                       |    Bin [31m0[m -> [32m47241[m bytes
+ outputs/grafico_errores.png                        |    Bin [31m0[m -> [32m30131[m bytes
+ outputs/grafico_f1_score.png                       |    Bin [31m0[m -> [32m17282[m bytes
+ outputs/grafico_precision_recall.png               |    Bin [31m0[m -> [32m29480[m bytes
+ outputs/metrics_report.json                        |     30 [32m+[m
+ requirements.txt                                   |    Bin [31m138[m -> [32m180[m bytes
+ visualizaciones/matriz_confusion_validada.png      |    Bin [31m0[m -> [32m47211[m bytes
+ 20 files changed, 239721 insertions(+), 277 deletions(-)
+
+[33mcommit ec23accea9f7f3a5ee33d0d80cd6ac8b7de108e9[m
+Author: pipebravo10 <64911875+pipebravo10@users.noreply.github.com>
+Date:   Wed Apr 30 21:51:48 2025 -0500
+
+    Add files via upload
+
+ models/label_encoder.pkl | Bin [31m0[m -> [32m354[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit a6cec11227fb6318818840e753d9ac2f14641b12[m
+Author: pipebravo10 <64911875+pipebravo10@users.noreply.github.com>
+Date:   Wed Apr 30 21:51:25 2025 -0500
+
+    Add files via upload
+
+ notebooks/modelbert.ipynb | 369 [32m++++++++++++++++++++++++++++++++++++++++++++++[m
+ 1 file changed, 369 insertions(+)
+
+[33mcommit 454079cd390055d17650cd1abee7f12919da0006[m
+Author: pipebravo10 <64911875+pipebravo10@users.noreply.github.com>
+Date:   Wed Apr 30 21:50:52 2025 -0500
+
+    Imagenes Modelo
+
+ visualizaciones/MatrizConfunsion.png          | Bin [31m0[m -> [32m47239[m bytes
+ visualizaciones/RendimientoModelo.png         | Bin [31m0[m -> [32m42086[m bytes
+ visualizaciones/ReporteClasficacionModelo.png | Bin [31m0[m -> [32m14027[m bytes
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit f59f166358ae33a4af00e20a6e2b9bd2ae8b3abf[m
+Author: pipebravo10 <64911875+pipebravo10@users.noreply.github.com>
+Date:   Wed Apr 30 21:50:10 2025 -0500
+
+    Implementar Modelo
+
+ src/ModeloBERT.py | 225 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 1 file changed, 225 insertions(+)
+
+[33mcommit 11ce444404117dc1928528deae11b381f3a7948c[m
+Author: carot2 <tobaria6@hotmail.com>
+Date:   Wed Apr 30 11:36:35 2025 -0500
+
+    Se agrega requirements, Preprocesamiento_Bert.py que genera en /data bert_tokenizer, data_analys.json, dataset_metadata.json, test_data.csv, y train_data.csv
+
+ data/bert_tokenized_data.pt  |   Bin [31m0[m -> [32m32749461[m bytes
+ data/data_analysis.json      |    40 [32m+[m
+ data/dataset_metadata.json   |    25 [32m+[m
+ data/test_data.csv           |  4794 [32m++++++++++++++++++[m
+ data/train_data.csv          | 11182 [32m+++++++++++++++++++++++++++++++++++++++++[m
+ requirements.txt             |   Bin [31m0[m -> [32m138[m bytes
+ src/Preprocesamiento_Bert.py |   181 [32m+[m
+ 7 files changed, 16222 insertions(+)
+
+[33mcommit be4b8e6f5a16c588e5b5690c690481614be8607b[m
+Author: carot2 <tobaria6@hotmail.com>
+Date:   Wed Apr 30 11:10:49 2025 -0500
+
+    Se actualiza exploración
+
+ notebooks/Exploracion.ipynb | 181 [32m++++++++++++++++++++++++[m[31m--------------------[m
+ 1 file changed, 100 insertions(+), 81 deletions(-)
+
+[33mcommit a3cb3ac399a2338ecdab9650b9c517b7c0abd0ae[m
+Author: carot2 <tobaria6@hotmail.com>
+Date:   Wed Apr 30 11:09:17 2025 -0500
+
+    Se agregan visualizaciones
+
+ notebooks/datos_procesados_bert.pt                    | Bin [31m0[m -> [32m3461185[m bytes
+ .../Distribuci\303\263nCategor\303\255as.png"         | Bin [31m0[m -> [32m49187[m bytes
+ .../Distribuci\303\263ncaracteresPalabras.png"        | Bin [31m0[m -> [32m62814[m bytes
+ .../Evoluci\303\263nTemporalSolicitudes.png"          | Bin [31m0[m -> [32m58803[m bytes
+ visualizaciones/NubePalabrasFrecuentes.png            | Bin [31m0[m -> [32m364281[m bytes
+ .../Relaci\303\263nEntreSectorCategoria.png"          | Bin [31m0[m -> [32m85503[m bytes
+ visualizaciones/Top10Municipios.png                   | Bin [31m0[m -> [32m66132[m bytes
+ 7 files changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit b66c997a56f762fba6c1d656f390e0701f36ff75[m
+Author: carot2 <tobaria6@hotmail.com>
+Date:   Wed Apr 30 10:55:41 2025 -0500
+
+    "Se agrega Exploración en carpeta raíz"
+
+ notebooks/Exploracion.ipynb | 1616 [32m+++++++++++++++++++++++++++++++++++++++++++[m
+ proyecto_dl                 |    1 [31m-[m
+ 2 files changed, 1616 insertions(+), 1 deletion(-)
+
+[33mcommit db16ada8b814f31007526e9e6fc865339c803a84[m
+Author: pipebravo10 <felipe.20.06@hotmail.com>
+Date:   Wed Apr 30 10:30:44 2025 -0500
+
+    Incluyendo Exploracion.ipynb
+
+ proyecto_dl | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit d3c6e75ed7a7ecebfb24e606f694dcdbe0d0a0a9[m
+Author: Julk-ui <grinconp2@ucentral.edu.co>
+Date:   Tue Apr 29 23:14:03 2025 -0500
+
+    se añade el dataset
+
+ src/dataset_ong2.xlsx | Bin [31m0[m -> [32m1739438[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit e1faa737882e5b7e269de6e44616f4fe73dfd04c[m
+Author: jeremiaspabon <jpabonl@ucentral.edu.co>
+Date:   Mon Apr 28 19:33:03 2025 -0500
+
+    Create x
+
+ src/x | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit d6c7c6d8b9732752193400fecb7232dcd024832c[m
+Author: jeremiaspabon <jpabonl@ucentral.edu.co>
+Date:   Mon Apr 28 19:31:26 2025 -0500
+
+    folder notebooks
+
+ notebooks/x | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 0ab27141a85f950ed14f4c7c1fd196c9eab90ffe[m
+Author: jeremiaspabon <jpabonl@ucentral.edu.co>
+Date:   Mon Apr 28 19:28:20 2025 -0500
+
+    folder models
+
+ models/x | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit aa0ac5acbbe35f9ac033be10bc993f85e55a065a[m
+Author: jeremiaspabon <jpabonl@ucentral.edu.co>
+Date:   Mon Apr 28 19:23:38 2025 -0500
+
+    Initial commit
+
+ .gitignore | 174 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ README.md  |   2 [32m+[m
+ 2 files changed, 176 insertions(+)
