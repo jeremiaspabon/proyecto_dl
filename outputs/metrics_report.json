@@ -1,0 +1,30 @@
+{
+  "accuracy": 0.8543709576465679,
+  "macro_f1": 0.7377074000072992,
+  "classes": [
+    {
+      "label": "Insatisfacci\u00f3n m\u00ednima",
+      "precision": 0.5163398692810458,
+      "recall": 0.7203647416413373,
+      "f1_score": 0.6015228426395939
+    },
+    {
+      "label": "Retroalimentaci\u00f3n positiva",
+      "precision": 0.9401172529313233,
+      "recall": 0.9107505070993914,
+      "f1_score": 0.9252009066556769
+    },
+    {
+      "label": "Solicitud  de asistencia",
+      "precision": 0.4878048780487805,
+      "recall": 0.6896551724137931,
+      "f1_score": 0.5714285714285714
+    },
+    {
+      "label": "Solicitud de informaci\u00f3n",
+      "precision": 0.8878842676311031,
+      "recall": 0.8201559020044543,
+      "f1_score": 0.8526772793053545
+    }
+  ]
+}
